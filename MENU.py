@@ -40,7 +40,7 @@ def menu_crud_admin():
                 "5. Keluar"]
             )
         ]
-    menu_dipilih = inquirer.prompt(pilih_menu)
+    menu_dipilih = inquirer.prompt(pilih_menu)["Menu"][0]
     print("======================================================")
     
     while True:

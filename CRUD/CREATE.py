@@ -47,5 +47,3 @@ def tambah_game():
     
     print(game)
 
-
-tambah_game()
