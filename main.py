@@ -13,20 +13,6 @@ from CRUD.DELETE import hapus_game
 from MENU import menu_crud_admin,menu_multi_login,menu_user,menu_autentikasi_user
 from AUTENTIKASI import admin_login,user_login,user_regist
 
-list_akun_admin = [
-    {
-    "username":"Rafi",
-    "password":"admin034"
-    },
-    {
-    "username":"Bakil",
-    "password":"admin044"
-    },
-    {
-    "username":"Ozora",
-    "password":"admin034"
-    }
-                   ]
 
 # Program Utama
 
