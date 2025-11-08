@@ -46,4 +46,3 @@ def tambah_game():
        json.dump(game, newValue, indent=4)
     
     print(game)
-
