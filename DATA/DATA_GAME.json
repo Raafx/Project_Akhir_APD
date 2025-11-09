@@ -18,5 +18,29 @@
             "Sci-Fi",
             "Open World"
         ]
+    },
+    "A003": {
+        "judul_game": "Tekken 8",
+        "tahun rilis": "2024-01-26",
+        "harga": 599000,
+        "genre": [
+            "Fighting",
+            "Action",
+            "Multiplayer"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
+    },
+    "A004": {
+        "judul_game": "Resident Evil 4",
+        "tahun rilis": "2023-03-24",
+        "harga": 519000,
+        "genre": [
+            "Action",
+            "Horror",
+            "Survival"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }

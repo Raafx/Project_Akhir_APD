@@ -6,6 +6,8 @@ from CRUD.READ import tampilkan_game
 from CRUD.UPDATE import ubah_data_game
 from CRUD.DELETE import hapus_game
 
+from TRANKSAKSI import beli_game,top_up
+
 
 
 def menu_multi_login():
@@ -27,28 +29,29 @@ def menu_multi_login():
     
 
 def menu_crud_admin():
-    os.system("cls || clear")
-    print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
-    print("Anda Login sebagai Admin, Silahkan pilih menu dibawah:")
-    print("\n======================================================")
-    
-    pilih_menu = [inquirer.List(
-            "Menu",
-            message="Pilih Menu",
-            choices=[
-                "1. Tambah Game (Create)",
-                "2. Tampilkan Data Game (Read)",
-                "3. Ubah Data Game (Update)",
-                "4. Hapus Data Game (Delete)",
-                "5. Keluar"]
-            )
-        ]
-    menu_dipilih = inquirer.prompt(pilih_menu)["Menu"][0]
-    print("======================================================")
-    
-    
     while True:
-            
+        os.system("cls || clear")
+        print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
+        print("Anda Login sebagai Admin, Silahkan pilih menu dibawah:")
+        print("\n======================================================")
+
+        pilih_menu = [inquirer.List(
+                "Menu",
+                message="Pilih Menu",
+                choices=[
+                    "1. Tambah Game (Create)",
+                    "2. Tampilkan Data Game (Read)",
+                    "3. Ubah Data Game (Update)",
+                    "4. Hapus Data Game (Delete)",
+                    "5. Keluar"]
+                )
+            ]
+        menu_dipilih = inquirer.prompt(pilih_menu)["Menu"][0]
+        print("======================================================")
+
+
+
+
         if menu_dipilih == "1":
             tambah_game()
 
@@ -68,33 +71,37 @@ def menu_crud_admin():
     
 
 def menu_user():
-    os.system("cls || clear")
-    print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
-    print("Anda Login sebagai User, Silahkan pilih menu dibawah:")
-    pilih_menu = [inquirer.List(
-            "Menu",
-            message="Pilih Menu",
-            choices=[
-                "1. Beli Game",
-                "2. Info Akun",
-                "3. Top Up",
-                "4. Log Out",
-                ]
-            )
-        ]
-    menu_dipilih = inquirer.prompt(pilih_menu)
-    print("======================================================\n")
-    if menu_dipilih == "1":
-        pass
+    while True:
         
-    elif menu_dipilih == "2":
-        pass
-        
-    elif menu_dipilih == "3":
-        pass
-        
-    elif menu_dipilih == "4":
-        pass
+        os.system("cls || clear")
+        print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
+        print("Anda Login sebagai User, Silahkan pilih menu dibawah:")
+        pilih_menu = [inquirer.List(
+                "Menu",
+                message="Pilih Menu",
+                choices=[
+                    "1. Beli Game",
+                    "2. Info Akun",
+                    "3. Top Up",
+                    "4. Log Out",
+                    ]
+                )
+            ]
+        menu_dipilih = inquirer.prompt(pilih_menu)
+        print("======================================================\n")
+        match menu_dipilih:
+            case "1. Beli Game":
+                beli_game()
+                
+            case "2. Info Akun":
+                pass
+            
+            case "3. Top Up":
+                top_up()
+                
+            case "4. Log Out":
+                break
+
 
 def menu_autentikasi_user():
     os.system("cls || clear")
