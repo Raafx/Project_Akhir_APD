@@ -1,9 +1,10 @@
 import datetime
 import json
+import inquirer
 # from pathlib import Path
 
 def tambah_game():
-    path = "..\DATA\DATA_GAME.json"
+    path = ".\DATA\DATA_GAME.json"
     checkDup = 0
     with open(path, "r") as file :
         game = json.load(file)
@@ -37,7 +38,9 @@ def tambah_game():
        "judul_game" : Nama_game,
        "tahun rilis" : tanggal,
        "harga" : harga,
-       "genre" : list_genre
+       "genre" : list_genre,
+       "total_terjual" : 0,
+       "total_pendapatan" : 0
     }
 
     game[f"A00{len(game) + 1}"] = gameBaru
@@ -45,4 +48,21 @@ def tambah_game():
     with open(path, "w") as newValue :
        json.dump(game, newValue, indent=4)
     
-    print(game)
+    print("game berhasil dimasukkan")
+    lanjut = [inquirer.List(
+       "menu",
+       message="mau lanjut tambah game?",
+       choices=[
+          "1. Ya",
+          "2. Tidak"]
+
+      )
+    ]
+    pilihan = inquirer.prompt(lanjut)["menu"][0]
+
+    if pilihan == "1" :
+       tambah_game()
+
+    elif pilihan == "2" :
+       return "keluar dari fitur tambah game"
+    
