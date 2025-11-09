@@ -115,7 +115,7 @@ def menu_autentikasi_user():
                 ]
             )
         ]
-    menu_dipilih = inquirer.prompt(pilih_menu)
+    menu_dipilih = inquirer.prompt(pilih_menu)["Menu"]
     return menu_dipilih
         
         

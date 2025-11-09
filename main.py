@@ -25,7 +25,7 @@ if __name__ == "__main__":
                 admin_login()
                 
             case "2. User":
-                menu_autentikasi_user()
+                menu_dipilih = menu_autentikasi_user()
                 match menu_dipilih:
                     case "1. Login":
                         user_login()
