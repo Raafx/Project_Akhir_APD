@@ -1,10 +1,14 @@
 import datetime
 import json
 import inquirer
-# from pathlib import Path
+from pathlib import Path
 
 def tambah_game():
-    path = ".\DATA\DATA_GAME.json"
+    lokasiFile = Path(__file__).resolve()
+    folderSekarang = lokasiFile.parent
+    folderUtama = folderSekarang.parent
+    path_json = folderUtama / "DATA" / "DATA_GAME.json"
+
     checkDup = 0
     with open(path, "r") as file :
         game = json.load(file)
@@ -65,4 +69,5 @@ def tambah_game():
 
     elif pilihan == "2" :
        return "keluar dari fitur tambah game"
-    
+
+tambah_game()

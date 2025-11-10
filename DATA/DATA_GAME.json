@@ -7,7 +7,9 @@
             "RPG",
             "Fantasy",
             "Open World"
-        ]
+        ],
+        "total_terjual" : 0,
+        "total_pendapatan" : 0
     },
     "A002": {
         "judul_game": "NieR:automata",
@@ -17,6 +19,8 @@
             "JRPG",
             "Sci-Fi",
             "Open World"
-        ]
+        ],
+        "total_terjual" : 0,
+        "total_pendapatan" : 0
     }
 }
