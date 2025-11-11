@@ -46,8 +46,8 @@ def tambah_game():
        "total_terjual" : 0,
        "total_pendapatan" : 0
     }
-
-    game[f"A00{len(game) + 1}"] = gameBaru
+    urutan = len(game) + 1
+    game[f"A{urutan:03d}"] = gameBaru
 
     with open(path_json, "w") as newValue :
        json.dump(game, newValue, indent=4)
@@ -69,3 +69,5 @@ def tambah_game():
 
     elif pilihan == "2" :
        return "keluar dari fitur tambah game"
+
+tambah_game()
