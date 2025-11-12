@@ -12,25 +12,14 @@ def tampilkan_game():
    with open(path_json, "r") as file :
       fileGame = json.load(file)
 
+   table = PrettyTable()
+   table.field_names = ["Id", "Nama game", "tahun rilis", "harga game", "genre", "total terjual", "total pendapatan"]
+   
    for i in fileGame :
-      table = PrettyTable()
-      table.field_names = ["Harga", f"Rp {fileGame[i]["harga"]}"]
+      id = fileGame[i]
 
-      for g,h in fileGame[i].items() :
-         if "judul_game" in g :
-            continue
-          
-         elif "harga" in g :
-            continue
-         
-         table.add_row([g,h])
+      table.add_row([i, id["judul_game"], id["tahun_rilis"], id["harga"], id["genre"], id["total_terjual"], id["total_pendapatan"] ])
       
-      stringTable = str(table)
-      lebar = len(stringTable.split("\n")[0])
-      setengahLebar = ((lebar - len(fileGame[i]["judul_game"]))/2)
-      print("=" * math.floor(setengahLebar), end="")
-      print(fileGame[i]["judul_game"], end="") 
-      print("=" * math.ceil(setengahLebar))
       print(table)
-      
-   kembali = input("Input Enter atau apa saja untuk kembali: ")
+
+tampilkan_game()

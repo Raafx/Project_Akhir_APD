@@ -1,7 +1,7 @@
 {
     "A001": {
         "judul_game": "Elden Ring",
-        "tahun Rilis": "2022-02-25",
+        "tahun_rilis": "2022-02-25",
         "harga": 599000,
         "genre": [
             "RPG",
@@ -13,7 +13,7 @@
     },
     "A002": {
         "judul_game": "NieR:automata",
-        "tahun rilis": "2017-03-17",
+        "tahun_rilis": "2017-03-17",
         "harga": 579000,
         "genre": [
             "JRPG",
@@ -25,7 +25,7 @@
     },
     "A003": {
         "judul_game": "Tekken 8",
-        "tahun rilis": "2024-01-26",
+        "tahun_rilis": "2024-01-26",
         "harga": 599000,
         "genre": [
             "Fighting",
@@ -37,7 +37,7 @@
     },
     "A004": {
         "judul_game": "Resident Evil 4",
-        "tahun rilis": "2023-03-24",
+        "tahun_rilis": "2023-03-24",
         "harga": 519000,
         "genre": [
             "Action",
