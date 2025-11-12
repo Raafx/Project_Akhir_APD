@@ -46,5 +46,15 @@
         ],
         "total_terjual": 0,
         "total_pendapatan": 0
+    },
+    "A005": {
+        "judul_game": "TEs",
+        "tahun_rilis": "2020-09-12",
+        "harga": 2000000,
+        "genre": [
+            "Fighting"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }

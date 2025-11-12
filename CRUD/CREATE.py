@@ -68,10 +68,4 @@ def tambah_game():
        tambah_game()
 
     elif pilihan == "2" :
-<<<<<<< HEAD
        return "keluar dari fitur tambah game"
-=======
-       return "keluar dari fitur tambah game"
->>>>>>> c902dbc183e6fccc7efab3b5f512e31a0ef7a80a
-
-tambah_game()
