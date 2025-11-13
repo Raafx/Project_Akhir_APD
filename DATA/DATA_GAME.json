@@ -33,5 +33,15 @@
         ],
         "total_terjual": 0,
         "total_pendapatan": 0
+    },
+    "A005": {
+        "judul_game": "CS 2",
+        "tahun_rilis": "2000",
+        "harga": 200000,
+        "genre": [
+            "FPS"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }
