@@ -11,7 +11,7 @@
         "total_terjual": 0,
         "total_pendapatan": 0
     },
-    "A003": {
+    "A002": {
         "judul_game": "Tekken 8",
         "tahun_rilis": "2024-01-26",
         "harga": 599000,
@@ -23,23 +23,24 @@
         "total_terjual": 0,
         "total_pendapatan": 0
     },
-    "A004": {
-        "judul_game": "Dota 2",
-        "tahun_rilis": "2012-12-12",
-        "harga": 199000,
-        "genre": [
-            "Moba",
-            " Multiplayer"
-        ],
-        "total_terjual": 0,
-        "total_pendapatan": 0
-    },
-    "A005": {
+    "A003": {
         "judul_game": "CS 2",
         "tahun_rilis": "2000",
         "harga": 200000,
         "genre": [
             "FPS"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
+    },
+    "A004": {
+        "judul_game": "GTA 6",
+        "tahun_rilis": "2026-10-26",
+        "harga": 90000,
+        "genre": [
+            "Open World",
+            " asd",
+            " asd"
         ],
         "total_terjual": 0,
         "total_pendapatan": 0
