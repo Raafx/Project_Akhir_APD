@@ -1,37 +1,59 @@
 import json
 from pathlib import Path
 from time import sleep
-def hapus_game():
+import os
+import inquirer
+from CRUD.READ import tampilkan_game
 
+def hapus_game():
+    
     lokasiFile = Path(__file__).resolve()
     folderSekarang = lokasiFile.parent
     folderUtama = folderSekarang.parent
     path_json = folderUtama / "DATA" / "DATA_GAME.json"
 
+    # Load data
     try:
         with open(path_json, "r") as file:
-            fileGame = json.load(file)
+            games = json.load(file)
     except FileNotFoundError:
         print("File DATA_GAME.json tidak ditemukan.")
         return
 
-    print("\nDaftar ID Game:")
-    for id_game in fileGame:
-        print(f"- {id_game} ({fileGame[id_game]['judul_game']})")
+    if len(games) == 0:
+        print("Belum ada game untuk dihapus.")
+        return
 
-    id_hapus = input("\nMasukkan ID game yang ingin dihapus: ").upper()
+    game_keys = list(games.keys())
 
-    if id_hapus in fileGame:
-        konfirmasi = input(f"Apakah kamu yakin ingin menghapus '{fileGame[id_hapus]['judul_game']}'? (y/n): ").lower()
-        if konfirmasi == "y":
-            del fileGame[id_hapus]
+    tampilkan_game()
+
+
+    id_hapus = input("Masukkan ID game yang ingin dihapus (contoh: A001 DST.): ").upper()
+
+    if id_hapus in games:
+        game = games[id_hapus]
+        print(f"\nKamu akan menghapus game: {game['judul_game']} ({game['tahun_rilis']} - {', '.join(game['genre'])})")
+        konfirmasi = inquirer.prompt([
+            inquirer.List("konfirmasi", message="Konfirmasi penghapusan", choices=["Ya", "Tidak"])
+        ])["konfirmasi"]
+
+        if konfirmasi == "Ya":
+            del games[id_hapus]
+
+            games_baru = {}
+            for i, data in enumerate(games.values(), start=1):
+                id_baru = f"A{str(i).zfill(3)}"
+                games_baru[id_baru] = data
+
             with open(path_json, "w") as file:
-                json.dump(fileGame, file, indent=4)
-                sleep(2)
+                json.dump(games_baru, file, indent=4)
+
+            sleep(1)
+            os.system('cls')
             print("Game berhasil dihapus.")
+            sleep(1)
         else:
-            sleep(2)
             print("Penghapusan dibatalkan.")
     else:
-        sleep(2)
         print("ID game tidak ditemukan.")
