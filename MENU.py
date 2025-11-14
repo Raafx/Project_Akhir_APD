@@ -30,7 +30,7 @@ def menu_multi_login():
 
 def menu_crud_admin():
     while True:
-        os.system("cls || clear")
+        
         print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
         print("Anda Login sebagai Admin, Silahkan pilih menu dibawah:")
         print("\n======================================================")
@@ -73,7 +73,6 @@ def menu_crud_admin():
 def menu_user(akun_saat_ini):
     while True:
         
-        os.system("cls || clear")
         print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
         print("Anda Login sebagai User, Silahkan pilih menu dibawah:")
         pilih_menu = [inquirer.List(

@@ -5,7 +5,7 @@ import math
 import os
 
 def tampilkan_game():
-   os.system("cls || clear")
+   
    lokasiFile = Path(__file__).resolve()
    folderSekarang = lokasiFile.parent
    folderUtama = folderSekarang.parent

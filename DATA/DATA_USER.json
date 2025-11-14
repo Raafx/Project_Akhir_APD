@@ -19,5 +19,16 @@
         "PIN": 202024,
         "saldo": 0,
         "koleksi_game": []
+    },
+    "U004": {
+        "username": "Raafx",
+        "password": "ydj4d467",
+        "PIN": 40607,
+        "saldo": 98603000,
+        "koleksi_game": [
+            "Tekken 8",
+            "Elden Ring",
+            "Dota 2"
+        ]
     }
 }
