@@ -44,5 +44,29 @@
         ],
         "total_terjual": 0,
         "total_pendapatan": 0
+    },
+    "A005": {
+        "judul_game": "GTA 2077",
+        "tahun_rilis": "2077-12-12",
+        "harga": 90000,
+        "genre": [
+            "Roleplay",
+            "Open World",
+            "Simulasi"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
+    },
+    "A006": {
+        "judul_game": "LEFT4DEAD 2",
+        "tahun_rilis": "2020-10-10",
+        "harga": 300000,
+        "genre": [
+            "Horror",
+            "Multiplayer",
+            "Shooting"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }
