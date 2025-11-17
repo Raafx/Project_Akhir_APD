@@ -58,7 +58,7 @@ def menu_crud_admin():
                 tampilkan_game()
                 input("Input apa saja untuk kembali: ")
                 
-            case "3. Ubah Data Game (Update)",:
+            case "3. Ubah Data Game (Update)":
                 ubah_data_game()
                 
             case "4. Hapus Data Game (Delete)":
