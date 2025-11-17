@@ -1,19 +1,30 @@
 def input_string_handling(input_user):
-    if input_user == "" or input_user.isspace() :
-       raise ValueError("input tidak boleh kosong atau spasi saja")
-    
-    elif input_user.isdigit() :
-       raise ValueError("input tidak boleh nomor saja")
+    while True :
+      try :
+          input_string = input(f"{input_user} : ")
+          if input_string == "" or input_string.isspace() :
+            raise ValueError("input tidak boleh kosong atau spasi saja")
+            
+          elif input_string.isdigit() :
+            raise ValueError("input tidak boleh nomor saja")
+          
+      except ValueError as e :
+          print(f"input error : {e}")
+      else :
+          return input_string
 
       
 def input_number_handling(input_user):
-    try :
-        input_user
-        
-    except ValueError :
-        raise ValueError("input bukan angka")
-    
-    if input_user < 0 :
-        raise ValueError("angka tidak boleh kurang dari 1")
-    
+   while True :
+      try :
+         input_integer = int(input(f"{input_user} : "))
+         if input_integer < 0 :
+           raise ValueError("input nomor harus lebih dari 0")
+         
+      except ValueError as e :
+         print(f"input error : {e}")
+         
+      else :
+         return input_integer
+         
 
