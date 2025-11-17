@@ -49,13 +49,7 @@ def admin_login():
              
 def cek_username(data_username):
     
-    
-    username = input("Buat Username Anda")
-    try :
-        input_string_handling(username)
-    except ValueError as e :
-        print(f"input error : {e}")
-        
+    username = input_string_handling("masukkan username anda")
     for key,value in data_username.items():
         print(value["username"])
         if username == value["username"]:
@@ -100,16 +94,11 @@ def user_regist():
     user_id = f"U{len(data_user)+1:03d}"
     
     username = cek_username(data_user) 
-    password = input("Buat PAssword Anda: ")
-    
-    try :
-        input_string_handling(password)
-    except ValueError as e :
-        print(f"input error : {e}")
+    password = input_string_handling("buat Password anda")
 
     pin_user = buat_pin("Buat PIN anda 4-6 Digit: ")
     saldo = 0
-    koleksi_game = []
+    koleksi_game = 0
     
     user_baru = {
         "username": username,

@@ -23,8 +23,7 @@ def tambah_game():
         game = json.load(file)
 
     try :
-     Nama_game = input("masukkan nama Game :")
-     input_string_handling(Nama_game)
+     Nama_game = input_string_handling("masukkan nama game")
 
      for key in game:
          if Nama_game in game[key]["judul_game"] :
@@ -38,12 +37,7 @@ def tambah_game():
        return
 
     tanggal = input("tanggal rilis (yyyy-mm-dd) : ") 
-    try :
-     harga = int(input("masukkan harga : "))
-     input_number_handling(harga)
-    except ValueError as e:
-       print(f"input error : {e}")
-       return
+    harga = input_number_handling("masukkan harga")
        
     genre = input("masukkan genre : ")
     
