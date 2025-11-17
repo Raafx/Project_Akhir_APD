@@ -37,12 +37,10 @@
     },
     "A005": {
         "judul_game": "GTA 2077",
-        "tahun_rilis": "2077-12-12",
-        "harga": 90000,
+        "tahun_rilis": "",
+        "harga": 900000,
         "genre": [
-            "Roleplay",
-            "Open World",
-            "Simulasi"
+            "MULTIPLAYER"
         ],
         "total_terjual": 0,
         "total_pendapatan": 0

@@ -44,9 +44,9 @@ def ubah_data_game():
                 ])["pilihan_data"]
 
                 if pilihan_data == "Judul Game":
-                    game["judul_game"] = input("Masukkan judul game baru: ")
+                    game["judul_game"] = input("Masukkan judul game yang baru: ")
                 elif pilihan_data == "Tahun Rilis":
-                    game["tahun_rilis"] = input("Masukkan tahun rilis baru: ")
+                    game["tahun_rilis"] = input("Masukkan tahun rilis yang baru: ")
                 elif pilihan_data == "Harga":
                     try:
                         game["harga"] = int(input("Masukkan harga baru: "))
@@ -56,11 +56,12 @@ def ubah_data_game():
                     
                 elif pilihan_data == "Genre":
                     genre_input = input("Masukkan genre baru (pisahkan dengan koma): ")
-                    game["genre"] = [g.strip() for g in genre_input.split(",")]
+                    game["genre"] = [g.strip() for g in genre_input.split(",")] # biar rapi nggak ada spasinya di awal/akhir
                 elif pilihan_data == "Total Terjual":
+                    continue
                     
-                    lanjut = inquirer.prompt([
-                        inquirer.List("lanjut", message="Ubah bagian lain dari game ini?", choices=["Ya", "Tidak"])
+                lanjut = inquirer.prompt([
+                    inquirer.List("lanjut", message="Ubah bagian lain dari game ini?", choices=["Ya", "Tidak"])
                 ])["lanjut"]
 
                 if lanjut == "Tidak":
