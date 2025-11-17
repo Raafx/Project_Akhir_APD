@@ -5,7 +5,7 @@ import math
 import os
 
 def tampilkan_game():
-   
+   os.system("cls || clear")
    lokasiFile = Path(__file__).resolve()
    folderSekarang = lokasiFile.parent
    folderUtama = folderSekarang.parent
@@ -24,5 +24,5 @@ def tampilkan_game():
       
    print(table)
    
-   kembali = input("Tekan Enter Untuk Kembali: ")
+   
    

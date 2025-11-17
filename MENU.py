@@ -30,7 +30,7 @@ def menu_multi_login():
 
 def menu_crud_admin():
     while True:
-        
+        os.system("cls || clear")
         print("========= KUKUSTATION: JUAL BELI GAME ===========\n")
         print("Anda Login sebagai Admin, Silahkan pilih menu dibawah:")
         print("\n======================================================")
@@ -46,26 +46,28 @@ def menu_crud_admin():
                     "5. Keluar"]
                 )
             ]
-        menu_dipilih = inquirer.prompt(pilih_menu)["Menu"][0]
+        menu_dipilih = inquirer.prompt(pilih_menu)["Menu"]
         print("======================================================")
 
 
+        match menu_dipilih:
+            case "1. Tambah Game (Create)":
+                tambah_game()
+                
+            case "2. Tampilkan Data Game (Read)":
+                tampilkan_game()
+                input("Input apa saja untuk kembali: ")
+                
+            case "3. Ubah Data Game (Update)",:
+                ubah_data_game()
+                
+            case "4. Hapus Data Game (Delete)":
+                hapus_game()
+                
+            case "5. Keluar":
+                break
 
 
-        if menu_dipilih == "1":
-            tambah_game()
-
-        elif menu_dipilih == "2":
-            tampilkan_game()
-
-        elif menu_dipilih == "3":
-            ubah_data_game()
-
-        elif menu_dipilih == "4":
-            hapus_game()
-
-        elif menu_dipilih == "5":
-            break
         
     
     
