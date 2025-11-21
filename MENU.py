@@ -2,7 +2,7 @@ import inquirer
 import os
 
 from CRUD.CREATE import tambah_game
-from CRUD.READ import tampilkan_game
+from CRUD.READ import tampilkan_game, tampilkan_info_akun
 from CRUD.UPDATE import ubah_data_game
 from CRUD.DELETE import hapus_game
 
@@ -99,7 +99,8 @@ def menu_user(akun_saat_ini):
                 beli_game(akun_saat_ini)
                 
             case "2. Info Akun":
-                pass
+                tampilkan_info_akun(akun_saat_ini)
+                input("Input apa saja untuk kembali: ")
             
             case "3. Top Up":
                 top_up(akun_saat_ini)

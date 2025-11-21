@@ -26,4 +26,23 @@ def tampilkan_game():
    
    
    
-   
+import json
+from pathlib import Path
+
+def tampilkan_info_akun(akun_saat_ini):
+    lokasiFile = Path(__file__).resolve()
+    folderSekarang = lokasiFile.parent
+    folderUtama = folderSekarang.parent
+    path_json = folderUtama / "DATA" / "DATA_USER.json"
+
+    with open(path_json, "r") as file:
+        fileGame = json.load(file)
+
+        akun = fileGame[akun_saat_ini]
+
+        print("===== INFO AKUN =====")
+        print(f"Username      : {akun['username']}")
+        print(f"Saldo         : Rp {akun['saldo']}")
+        print(f"PIN           : {akun['PIN']}")
+        print(f"Game dimiliki : {', '.join(akun['koleksi_game']) if akun['koleksi_game'] else 'Belum ada game'}")
+        print("================================\n")
