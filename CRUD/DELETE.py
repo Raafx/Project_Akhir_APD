@@ -4,6 +4,8 @@ from time import sleep
 import os
 import inquirer
 from CRUD.READ import tampilkan_game
+import datetime
+
 
 def hapus_game():
     
@@ -34,7 +36,8 @@ def hapus_game():
 
     if id_hapus in games:
         game = games[id_hapus]
-        print(f"\nKamu akan menghapus game: {game['judul_game']} ({game['tahun_rilis']} - {', '.join(game['genre'])})")
+        tanggal = datetime.date.fromisoformat(game['tahun_rilis'])
+        print(f"\nKamu akan menghapus game: {game['judul_game']} ({tanggal} - {', '.join(game['genre'])})")
         konfirmasi = inquirer.prompt([
             inquirer.List("konfirmasi", message="Konfirmasi penghapusan", choices=["Ya", "Tidak"])
         ])["konfirmasi"]
