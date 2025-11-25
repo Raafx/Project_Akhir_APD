@@ -1,3 +1,4 @@
+import datetime
 def input_string_handling(input_user):
     while True :
       try :
@@ -26,5 +27,23 @@ def input_number_handling(input_user):
          
       else :
          return input_integer
+
+def input_date_handling(input_user) :
+ while True :
+   tanggal = input(f"{input_user} : ")
+
+   try :
+      convert_data = datetime.datetime.strptime(tanggal, "%Y-%m-%d")
+      tanggal = convert_data.date()
+
+      if tanggal >= datetime.date.today() :
+         raise ValueError("tanggal lebih atau sama dengan hari ini")
+      
+   except ValueError as e :
+      print(f"error : {e}")
+
+   else :
+      return tanggal
+
          
 

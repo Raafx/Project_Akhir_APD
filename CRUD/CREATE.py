@@ -10,7 +10,7 @@ folderMain = folderFile.parent
 
 sys.path.append(str(folderMain))
 
-from INPUT_HANDLING import input_number_handling, input_string_handling
+from INPUT_HANDLING import input_number_handling, input_string_handling, input_date_handling
 
 def tambah_game():
     lokasiFile = Path(__file__).resolve()
@@ -36,7 +36,7 @@ def tambah_game():
        print(f"input error : {err}")
        return
 
-    tanggal = input("tanggal rilis (yyyy-mm-dd) : ") 
+    tanggal = input_date_handling("tanggal rilis (yyyy-mm-dd) : ") 
     harga = input_number_handling("masukkan harga")
        
     genre = input("masukkan genre : ")

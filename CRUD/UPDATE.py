@@ -4,6 +4,15 @@ from time import sleep
 import os
 import inquirer
 from CRUD.READ import tampilkan_game
+import sys
+
+lokasi = Path(__file__).resolve()
+folderFile = lokasi.parent
+folderMain = folderFile.parent
+
+sys.path.append(str(folderMain))
+
+from INPUT_HANDLING import input_number_handling, input_string_handling, input_date_handling
 
 def ubah_data_game():
     # Path ke file JSON
@@ -44,15 +53,11 @@ def ubah_data_game():
                 ])["pilihan_data"]
 
                 if pilihan_data == "Judul Game":
-                    game["judul_game"] = input("Masukkan judul game baru: ")
+                    game["judul_game"] = input_string_handling("Masukkan judul game baru")
                 elif pilihan_data == "Tahun Rilis":
-                    game["tahun_rilis"] = input("Masukkan tahun rilis baru: ")
+                    game["tahun_rilis"] = input_date_handling("Masukkan tahun rilis baru")
                 elif pilihan_data == "Harga":
-                    try:
-                        game["harga"] = int(input("Masukkan harga baru: "))
-                    except:
-                        print("Input tidak valid. Harga harus berupa angka.")
-                        continue
+                    game["harga"] = input_string_handling("Masukkan harga baru")
                     
                 elif pilihan_data == "Genre":
                     genre_input = input("Masukkan genre baru (pisahkan dengan koma): ")
