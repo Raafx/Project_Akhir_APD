@@ -4,6 +4,16 @@ from time import sleep
 import os
 import inquirer
 from CRUD.READ import tampilkan_game
+import datetime
+import sys
+
+lokasi = Path(__file__).resolve()
+folderFile = lokasi.parent
+folderMain = folderFile.parent
+
+sys.path.append(str(folderMain))
+
+from INPUT_HANDLING import input_number_handling, input_string_handling, input_date_handling
 
 def ubah_data_game():
     # Path ke file JSON
@@ -30,7 +40,8 @@ def ubah_data_game():
 
     if id_game in games:
         game = games[id_game]
-        print(f"\nKamu akan mengubah data game: {game['judul_game']} ({game['tahun_rilis']} - {', '.join(game['genre'])})")
+        tanggal = datetime.date.fromisoformat(game['tahun_rilis'])
+        print(f"\nKamu akan mengubah data game: {game['judul_game']} ({tanggal} - {', '.join(game['genre'])})")
 
         konfirmasi = inquirer.prompt([
             inquirer.List("konfirmasi", message="Lanjut ubah data?", choices=["Ya", "Tidak"])
@@ -44,12 +55,13 @@ def ubah_data_game():
                 ])["pilihan_data"]
 
                 if pilihan_data == "Judul Game":
-                    game["judul_game"] = input("Masukkan judul game yang baru: ")
+                    game["judul_game"] = input_string_handling("Masukkan judul game yang baru")
                 elif pilihan_data == "Tahun Rilis":
-                    game["tahun_rilis"] = input("Masukkan tahun rilis yang baru: ")
+                    tanggal_baru = input_date_handling("Masukkan tahun rilis yang baru (yyyy-mm-dd)")
+                    game["tahun_rilis"] = tanggal_baru.isoformat()
                 elif pilihan_data == "Harga":
                     try:
-                        game["harga"] = int(input("Masukkan harga baru: "))
+                        game["harga"] = input_number_handling("Masukkan harga baru: ")
                     except:
                         print("Input tidak valid. Harga harus berupa angka.")
                         continue

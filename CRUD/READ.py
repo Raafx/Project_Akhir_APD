@@ -3,6 +3,7 @@ from prettytable import PrettyTable
 from pathlib import Path
 import math
 import os
+import datetime
 
 def tampilkan_game():
    
@@ -19,8 +20,9 @@ def tampilkan_game():
    
    for i in fileGame :
       id = fileGame[i]
+      tanggal = datetime.date.fromisoformat(id['tahun_rilis'])
 
-      table.add_row([i, id["judul_game"], id["tahun_rilis"], id["harga"], id["genre"], id["total_terjual"], id["total_pendapatan"] ])
+      table.add_row([i, id["judul_game"], tanggal, id["harga"], id["genre"], id["total_terjual"], id["total_pendapatan"] ])
       
    print(table)
    
