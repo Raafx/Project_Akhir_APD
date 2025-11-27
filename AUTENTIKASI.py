@@ -165,7 +165,6 @@ def user_login():
 
         for id,akun in data_user.items():
             if username == akun["username"] and password == akun["password"]:
-                print(f"Selamat datang {username} , Anda berhasil login.")
                 menu_user(id,username)
                 percobaan = max_percobaan 
                 break

@@ -24,10 +24,13 @@
         "username": "Raafx",
         "password": "r467",
         "PIN": 40607,
-        "saldo": 7220190,
+        "saldo": 6922190,
         "koleksi_game": [
             "A002",
-            "A008"
+            "A008",
+            "A014",
+            "A013",
+            "A005"
         ]
     },
     "U005": {

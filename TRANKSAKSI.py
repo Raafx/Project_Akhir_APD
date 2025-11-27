@@ -43,12 +43,15 @@ def beli_game(id_akun_saat_ini):
         
     tampilkan_game()
     
-    pilih_game = input_string_handling("Masukan Judul Game yang ingin dibeli")
+    pilih_game = input_string_handling("\nMasukan Judul Game yang ingin dibeli")
+    
+    game_ditemukan = False
     
     
     for id,game in data_game.items():
-
+        
         if game["judul_game"].upper() == pilih_game.upper():
+            game_ditemukan = True
             
             judul_game = game["judul_game"]
             harga_game = game["harga"]
@@ -66,7 +69,7 @@ def beli_game(id_akun_saat_ini):
                     
                 
                 
-                    print(f"Anda membeli Game {judul_game} dengan harga {harga_game}")
+                    print(f"Anda membeli Game {judul_game} dengan harga {harga_game:,}")
                     pilih_menu = [inquirer.List(
                             "Menu",
                             message="Konfirmasi Pembayaran ??",
@@ -133,25 +136,31 @@ def beli_game(id_akun_saat_ini):
                                         json.dump(data_game, newValue, indent=4)
 
                                     print(f"\nPembayaran Berhasil, Game {judul_game} Telah masuk ke KoleksiAnda\n")
-                                    print(f"Saldo anda saat ini: {saldo_user}")
+                                    print(f"Saldo anda saat ini: {saldo_user:,}")
                                     break
+    if not game_ditemukan:
+        os.system("cls || clear")
+        print("Judul Game tidak ditemukan, silahkan input ulang\n")
+        beli_game(id_akun_saat_ini)
+        
+    else:
+        pilih_menu = [inquirer.List(
+        "Menu",
+        message="Ingin Membeli Game Lain?",
+        choices=[
+            "1. Ya",
+            "2. Kembali ke Menu"]
+        )
+        ]
+        menu_dipilih = inquirer.prompt(pilih_menu)["Menu"]
+        match menu_dipilih:
+            case "1. Ya":
+                beli_game(id_akun_saat_ini)
+
+            case "2. Kembali ke Menu":
+                pass
                 
-                                
-            pilih_menu = [inquirer.List(
-            "Menu",
-            message="Ingin Membeli Game Lain?",
-            choices=[
-                "1. Ya",
-                "2. Kembali ke Menu"]
-            )
-            ]
-            menu_dipilih = inquirer.prompt(pilih_menu)["Menu"]
-            match menu_dipilih:
-                case "1. Ya":
-                    beli_game(id_akun_saat_ini)
-                    break
-                case "2. Kembali ke Menu":
-                    break
+        
         
         
         
@@ -188,7 +197,7 @@ def top_up(id_akun_saat_ini):
     
 
             print("\n==================Top Up Berhasil!=================\n")
-            print(f"saldo anda saat ini: {saldo_akun}")
+            print(f"saldo anda saat ini: Rp. {saldo_akun:,}")
             break
         else:
             percobaan-=1

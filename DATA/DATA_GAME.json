@@ -23,17 +23,6 @@
         "total_terjual": 9,
         "total_pendapatan": 5391000
     },
-    "A003": {
-        "judul_game": "Minecraft Movie",
-        "tahun_rilis": "2021-08-12",
-        "harga": 90000,
-        "genre": [
-            "Open World",
-            "Gangster"
-        ],
-        "total_terjual": 1,
-        "total_pendapatan": 90000
-    },
     "A005": {
         "judul_game": "Harvest Moon: Back To Nature",
         "tahun_rilis": "1999-12-19",
@@ -42,8 +31,8 @@
             "Farm",
             "Story Mode"
         ],
-        "total_terjual": 1,
-        "total_pendapatan": 199000
+        "total_terjual": 2,
+        "total_pendapatan": 398000
     },
     "A006": {
         "judul_game": "Final Fantasy VII",
@@ -113,7 +102,18 @@
             "Pixel",
             "Adventure"
         ],
-        "total_terjual": 0,
-        "total_pendapatan": 0
+        "total_terjual": 1,
+        "total_pendapatan": 89000
+    },
+    "A014": {
+        "judul_game": "Minecraft",
+        "tahun_rilis": "2011-09-11",
+        "harga": 199000,
+        "genre": [
+            "Sandbox",
+            "Survival"
+        ],
+        "total_terjual": 1,
+        "total_pendapatan": 199000
     }
 }
