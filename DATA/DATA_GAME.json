@@ -1,15 +1,15 @@
 {
     "A001": {
-        "judul_game": "Elden Ring",
+        "judul_game": "Elden Liontin",
         "tahun_rilis": "2022-02-25",
-        "harga": 599000,
+        "harga": 99000,
         "genre": [
             "RPG",
             "Fantasy",
             "Open World"
         ],
-        "total_terjual": 2,
-        "total_pendapatan": 1198000
+        "total_terjual": 5,
+        "total_pendapatan": 1495000
     },
     "A002": {
         "judul_game": "Tekken 8",
@@ -20,12 +20,12 @@
             "Action",
             "Multiplayer"
         ],
-        "total_terjual": 4,
-        "total_pendapatan": 2396000
+        "total_terjual": 7,
+        "total_pendapatan": 4193000
     },
     "A003": {
-        "judul_game": "GTA 6",
-        "tahun_rilis": "2026-10-26",
+        "judul_game": "Minecraft Movie",
+        "tahun_rilis": "2021-08-12",
         "harga": 90000,
         "genre": [
             "Open World",
@@ -66,5 +66,17 @@
         ],
         "total_terjual": 1,
         "total_pendapatan": 699000
+    },
+    "A007": {
+        "judul_game": "Little Nightmare",
+        "tahun_rilis": "2020-09-12",
+        "harga": 90000,
+        "genre": [
+            "Horror",
+            "Puzzle",
+            "Adventure"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }

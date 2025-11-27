@@ -48,3 +48,5 @@ def tampilkan_info_akun(akun_saat_ini):
         print(f"PIN           : {akun['PIN']}")
         print(f"Game dimiliki : {', '.join(akun['koleksi_game']) if akun['koleksi_game'] else 'Belum ada game'}")
         print("================================\n")
+        
+      
