@@ -60,4 +60,29 @@ def tampilkan_info_akun(akun_saat_ini):
     print(f"PIN            : {akun['PIN']}")
     print(f"Game dimiliki  : {', '.join(koleksi_judul) if koleksi_judul else 'Belum ada game'}")
     print("================================\n")
-      
+    
+    
+
+def tampilkan_game_user():
+    lokasiFile = Path(__file__).resolve()
+    folderSekarang = lokasiFile.parent
+    folderUtama = folderSekarang.parent
+    path_json = folderUtama / "DATA" / "DATA_GAME.json"
+
+    with open(path_json, "r") as file:
+        fileGame = json.load(file)
+
+    table = PrettyTable()
+    table.field_names = ["Nama game", "Tahun rilis", "Harga", "Genre"]
+
+    for i in fileGame:
+        game = fileGame[i]
+        tanggal = datetime.date.fromisoformat(game['tahun_rilis'])
+        table.add_row([
+            game["judul_game"],
+            tanggal,
+            f"Rp {game['harga']}",
+            ", ".join(game["genre"])
+        ])
+
+    print(table)
