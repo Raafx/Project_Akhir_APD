@@ -1,15 +1,15 @@
 {
     "A001": {
-        "judul_game": "Elden Ring",
+        "judul_game": "Elden Liontin",
         "tahun_rilis": "2022-02-25",
-        "harga": 599000,
+        "harga": 99000,
         "genre": [
             "RPG",
             "Fantasy",
             "Open World"
         ],
-        "total_terjual": 2,
-        "total_pendapatan": 1198000
+        "total_terjual": 5,
+        "total_pendapatan": 1495000
     },
     "A002": {
         "judul_game": "Tekken 8",
@@ -20,12 +20,12 @@
             "Action",
             "Multiplayer"
         ],
-        "total_terjual": 4,
-        "total_pendapatan": 2396000
+        "total_terjual": 7,
+        "total_pendapatan": 4193000
     },
     "A003": {
-        "judul_game": "GTA 6",
-        "tahun_rilis": "2026-10-26",
+        "judul_game": "Minecraft Movie",
+        "tahun_rilis": "2021-08-12",
         "harga": 90000,
         "genre": [
             "Open World",
@@ -34,7 +34,7 @@
         "total_terjual": 1,
         "total_pendapatan": 90000
     },
-    "A004": {
+    "A005": {
         "judul_game": "Harvest Moon: Back To Nature",
         "tahun_rilis": "1999-12-19",
         "harga": 199000,
@@ -45,16 +45,7 @@
         "total_terjual": 1,
         "total_pendapatan": 199000
     },
-    "A005": {
-        "judul_game": "Tor Monitor Simulator",
-        "tahun_rilis": "2014-02-20",
-        "harga": 299000,
-        "genre": [
-            "Acik"
-        ],
-        "total_terjual": 2,
-        "total_pendapatan": 598000
-    },
+    
     "A006": {
         "judul_game": "Final Fantasy VII",
         "tahun_rilis": "2022-02-13",

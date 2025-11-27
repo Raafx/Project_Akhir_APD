@@ -2,6 +2,7 @@ import datetime
 import json
 import inquirer
 from pathlib import Path
+import re
 import sys
 
 lokasi = Path(__file__).resolve()
@@ -11,6 +12,23 @@ folderMain = folderFile.parent
 sys.path.append(str(folderMain))
 
 from INPUT_HANDLING import input_number_handling, input_string_handling, input_date_handling
+
+def buat_id(game_id) :
+   max_nomor_id = 0
+   pola = r'^A(\d+)$'
+
+   for used_id in game_id :
+      match = re.match(pola, used_id)
+
+      if match :
+         nomor_id = int(match.group(1))
+
+         if nomor_id > max_nomor_id :
+            max_nomor_id = nomor_id
+   
+   nomor_baru = max_nomor_id + 1
+   id_baru = f"A{nomor_baru:03d}"
+   return id_baru
 
 def tambah_game():
     lokasiFile = Path(__file__).resolve()
@@ -56,8 +74,10 @@ def tambah_game():
        "total_terjual" : 0,
        "total_pendapatan" : 0
     }
-    urutan = len(game) + 1
-    game[f"A{urutan:03d}"] = gameBaru
+    
+    id_game_terpakai = [id_game for id_game in game]
+    id_baru = buat_id(id_game_terpakai)
+    game[id_baru] = gameBaru
 
     with open(path_json, "w") as newValue :
        json.dump(game, newValue, indent=4)
@@ -79,3 +99,5 @@ def tambah_game():
 
     elif pilihan == "2" :
        return "keluar dari fitur tambah game"
+
+tambah_game()

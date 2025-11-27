@@ -4,6 +4,7 @@
         "password": "a123",
         "PIN": 202024,
         "saldo": 0,
+        "keranjang": [],
         "koleksi_game": []
     },
     "U002": {
@@ -11,6 +12,7 @@
         "password": "b123",
         "PIN": 202024,
         "saldo": 0,
+        "keranjang": [],
         "koleksi_game": []
     },
     "U003": {
@@ -18,20 +20,23 @@
         "password": "c123",
         "PIN": 202024,
         "saldo": 0,
+        "keranjang": [],
         "koleksi_game": []
     },
     "U004": {
         "username": "Raafx",
         "password": "r467",
         "PIN": 40607,
-        "saldo": 7706190,
+        "saldo": 7607190,
+        "keranjang": [],
         "koleksi_game": [
             "Tekken 8",
             "Elden Ring",
             "Harvest Moon: Back To Nature",
             "Half Life 2",
             "Final Fantasy VII",
-            "Left 4 Dead"
+            "Left 4 Dead",
+            "Elden Liontin"
         ]
     },
     "U005": {
@@ -49,6 +54,7 @@
         "password": "user123",
         "PIN": 40405,
         "saldo": 8910000,
+        "keranjang": [],
         "koleksi_game": [
             "GTA 6"
         ]
@@ -58,6 +64,7 @@
         "password": "asd123",
         "PIN": 2202,
         "saldo": 10902000,
+        "keranjang": [],
         "koleksi_game": [
             "Elden Ring",
             "Tekken 8"
