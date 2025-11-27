@@ -66,8 +66,8 @@
             "Indie",
             "Single player"
         ],
-        "total_terjual": 2,
-        "total_pendapatan": 218000
+        "total_terjual": 3,
+        "total_pendapatan": 327000
     },
     "A009": {
         "judul_game": "Geometry Dash",
@@ -78,8 +78,8 @@
             "Simulasi",
             "Music"
         ],
-        "total_terjual": 0,
-        "total_pendapatan": 0
+        "total_terjual": 1,
+        "total_pendapatan": 59000
     },
     "A011": {
         "judul_game": "BrawlHalla",
@@ -89,6 +89,29 @@
             "Action",
             "Multiplayer",
             "Competitif"
+        ],
+        "total_terjual": 1,
+        "total_pendapatan": 12000
+    },
+    "A012": {
+        "judul_game": "Doom",
+        "tahun_rilis": "2015-12-01",
+        "harga": 99000,
+        "genre": [
+            "FPS",
+            "Action"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
+    },
+    "A013": {
+        "judul_game": "Terraria",
+        "tahun_rilis": "2011-05-07",
+        "harga": 89000,
+        "genre": [
+            "Survival",
+            "Pixel",
+            "Adventure"
         ],
         "total_terjual": 0,
         "total_pendapatan": 0

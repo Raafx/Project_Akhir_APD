@@ -26,27 +26,38 @@ def tampilkan_game():
       
    print(table)
    
-   
-   
-import json
-from pathlib import Path
+
+def ambil_judul_game(koleksi_id, data_game):
+    judul_game = []
+    for id_game in koleksi_id:
+        if id_game in data_game: 
+            judul_game.append(data_game[id_game]["judul_game"])
+        else:  # kalau ternyata masih ada judul langsung
+            judul_game.append(id_game)
+    return judul_game
 
 def tampilkan_info_akun(akun_saat_ini):
     lokasiFile = Path(__file__).resolve()
     folderSekarang = lokasiFile.parent
     folderUtama = folderSekarang.parent
-    path_json = folderUtama / "DATA" / "DATA_USER.json"
+    path_user = folderUtama / "DATA" / "DATA_USER.json"
+    path_game = folderUtama / "DATA" / "DATA_GAME.json" 
 
-    with open(path_json, "r") as file:
-        fileGame = json.load(file)
+    with open(path_user, "r") as file_user:
+        data_user = json.load(file_user)
+        akun = data_user[akun_saat_ini]
 
-        akun = fileGame[akun_saat_ini]
+    with open(path_game, "r") as file_game:
+        daftar_game = json.load(file_game)
 
-        print("===== INFO AKUN =====")
-        print(f"Username      : {akun['username']}")
-        print(f"Saldo         : Rp {akun['saldo']}")
-        print(f"PIN           : {akun['PIN']}")
-        print(f"Game dimiliki : {', '.join(akun['koleksi_game']) if akun['koleksi_game'] else 'Belum ada game'}")
-        print("================================\n")
-        
+    # Konversi ID ke judul
+    koleksi_id = akun.get("koleksi_game", [])
+    koleksi_judul = ambil_judul_game(koleksi_id, daftar_game)
+
+    print("===== INFO AKUN =====")
+    print(f"Username       : {akun['username']}")
+    print(f"Saldo Anda     : Rp. {akun['saldo']}")
+    print(f"PIN            : {akun['PIN']}")
+    print(f"Game dimiliki  : {', '.join(koleksi_judul) if koleksi_judul else 'Belum ada game'}")
+    print("================================\n")
       
