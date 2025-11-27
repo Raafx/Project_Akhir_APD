@@ -55,9 +55,9 @@ def tampilkan_info_akun(akun_saat_ini):
     koleksi_judul = ambil_judul_game(koleksi_id, daftar_game)
 
     print("===== INFO AKUN =====")
-    print(f"Username      : {akun['username']}")
-    print(f"Saldo         : Rp {akun['saldo']}")
-    print(f"PIN           : {akun['PIN']}")
-    print(f"Game dimiliki : {', '.join(koleksi_judul) if koleksi_judul else 'Belum ada game'}")
+    print(f"Username       : {akun['username']}")
+    print(f"Saldo Anda     : Rp. {akun['saldo']}")
+    print(f"PIN            : {akun['PIN']}")
+    print(f"Game dimiliki  : {', '.join(koleksi_judul) if koleksi_judul else 'Belum ada game'}")
     print("================================\n")
       

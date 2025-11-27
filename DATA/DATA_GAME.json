@@ -92,5 +92,28 @@
         ],
         "total_terjual": 1,
         "total_pendapatan": 12000
+    },
+    "A012": {
+        "judul_game": "Doom",
+        "tahun_rilis": "2015-12-01",
+        "harga": 99000,
+        "genre": [
+            "FPS",
+            "Action"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
+    },
+    "A013": {
+        "judul_game": "Terraria",
+        "tahun_rilis": "2011-05-07",
+        "harga": 89000,
+        "genre": [
+            "Survival",
+            "Pixel",
+            "Adventure"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }
