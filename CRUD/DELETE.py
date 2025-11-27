@@ -8,7 +8,6 @@ import datetime
 
 
 def hapus_game():
-    
     lokasiFile = Path(__file__).resolve()
     folderSekarang = lokasiFile.parent
     folderUtama = folderSekarang.parent
@@ -20,17 +19,13 @@ def hapus_game():
             games = json.load(file)
     except FileNotFoundError:
         print("File DATA_GAME.json tidak ditemukan.")
-        
         return
 
     if len(games) == 0:
         print("Belum ada game untuk dihapus.")
         return
 
-    game_keys = list(games.keys())
-
     tampilkan_game()
-
 
     id_hapus = input("Masukkan ID game yang ingin dihapus (contoh: A001 DST.): ").upper()
 
@@ -45,13 +40,9 @@ def hapus_game():
         if konfirmasi == "Ya":
             del games[id_hapus]
 
-            games_baru = {}
-            for i, data in enumerate(games.values(), start=1):
-                id_baru = f"A{str(i).zfill(3)}"
-                games_baru[id_baru] = data
-
+            # simpan dictionary apa adanya
             with open(path_json, "w") as file:
-                json.dump(games_baru, file, indent=4)
+                json.dump(games, file, indent=4)
 
             sleep(1)
             os.system('cls')

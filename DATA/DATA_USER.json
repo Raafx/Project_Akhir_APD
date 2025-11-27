@@ -43,11 +43,10 @@
         "username": "Kills",
         "password": "ki123",
         "PIN": 404505,
-        "saldo": 8614000,
-        "keranjang": [],
+        "saldo": 72000,
         "koleksi_game": [
-            "A001",
-            "A002"
+            "Miside",
+            "Growtopia"
         ]
     },
     "U006": {

@@ -58,14 +58,38 @@
         "total_terjual": 1,
         "total_pendapatan": 699000
     },
-    "A007": {
-        "judul_game": "Little Nightmare",
-        "tahun_rilis": "2020-09-12",
-        "harga": 90000,
+    "A008": {
+        "judul_game": "Miside",
+        "tahun_rilis": "2011-12-07",
+        "harga": 109000,
         "genre": [
-            "Horror",
-            "Puzzle",
-            "Adventure"
+            "Animasi",
+            "Indie",
+            "Single player"
+        ],
+        "total_terjual": 1,
+        "total_pendapatan": 109000
+    },
+    "A009": {
+        "judul_game": "Geometry Dash",
+        "tahun_rilis": "2000-01-01",
+        "harga": 59000,
+        "genre": [
+            "Arcade",
+            "Simulasi",
+            "Music"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
+    },
+    "A011": {
+        "judul_game": "BrawlHalla",
+        "tahun_rilis": "1945-08-17",
+        "harga": 12000,
+        "genre": [
+            "Action",
+            "Multiplayer",
+            "Competitif"
         ],
         "total_terjual": 0,
         "total_pendapatan": 0
