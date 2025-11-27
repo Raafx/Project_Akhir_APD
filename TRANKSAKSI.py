@@ -1,7 +1,7 @@
 import os
 import json
 from pathlib import Path
-from CRUD.READ import tampilkan_game,tampilkan_game_user
+from CRUD.READ import tampilkan_game
 import inquirer
 from time import sleep
 
@@ -41,7 +41,7 @@ def beli_game(id_akun_saat_ini):
         
     
         
-    tampilkan_game_user()
+    tampilkan_game()
     
     pilih_game = input_string_handling("\nMasukan Judul Game yang ingin dibeli")
     
