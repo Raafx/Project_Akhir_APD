@@ -31,6 +31,8 @@ def buat_id(game_id) :
    return id_baru
 
 def tambah_game():
+   
+    print("========== Buat Data Game Baru ==========\n")
     lokasiFile = Path(__file__).resolve()
     folderSekarang = lokasiFile.parent
     folderUtama = folderSekarang.parent
@@ -52,6 +54,7 @@ def tambah_game():
      
     except ValueError as err :
        print(f"input error : {err}")
+       tambah_game()
        return
 
     tanggal = input_date_handling("tanggal rilis (yyyy-mm-dd)") 

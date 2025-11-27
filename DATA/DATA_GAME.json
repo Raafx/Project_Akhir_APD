@@ -1,6 +1,6 @@
 {
     "A001": {
-        "judul_game": "Elden Liontin",
+        "judul_game": "Elden Ring",
         "tahun_rilis": "2022-02-25",
         "harga": 99000,
         "genre": [
@@ -8,8 +8,8 @@
             "Fantasy",
             "Open World"
         ],
-        "total_terjual": 5,
-        "total_pendapatan": 1495000
+        "total_terjual": 6,
+        "total_pendapatan": 1594000
     },
     "A002": {
         "judul_game": "Tekken 8",
@@ -55,8 +55,8 @@
             "Indie",
             "Single player"
         ],
-        "total_terjual": 3,
-        "total_pendapatan": 327000
+        "total_terjual": 4,
+        "total_pendapatan": 339000
     },
     "A009": {
         "judul_game": "Geometry Dash",
@@ -115,5 +115,16 @@
         ],
         "total_terjual": 3,
         "total_pendapatan": 597000
+    },
+    "A015": {
+        "judul_game": "Need for Speed",
+        "tahun_rilis": "2020-08-09",
+        "harga": 299000,
+        "genre": [
+            "Racing",
+            "Car"
+        ],
+        "total_terjual": 0,
+        "total_pendapatan": 0
     }
 }

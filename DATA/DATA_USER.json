@@ -107,5 +107,16 @@
         "koleksi_game": [
             "A014"
         ]
+    },
+    "U013": {
+        "username": "RappGamer",
+        "password": "r00445",
+        "PIN": 90807,
+        "saldo": 1888000,
+        "keranjang": [],
+        "koleksi_game": [
+            "A001",
+            "A008"
+        ]
     }
 }
